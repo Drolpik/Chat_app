@@ -1,3 +1,4 @@
+import { useRef, useEffect } from 'react';
 import { db } from '../../firebase/config';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 import classes from './ChatRoom.module.scss';
@@ -8,8 +9,12 @@ import Navbar from '../Navbar/Navbar';
 const ChatRoom = () => {
     const messagesCollections = db.collection('messages');
     const queryToDB = messagesCollections.orderBy('createdAt').limit(30);
-
     const [messages] = useCollectionData(queryToDB, {idField: 'id'});
+    const lastMessage = useRef();
+
+    useEffect(() => {
+        lastMessage.current.scrollIntoView({behavior: 'smooth'});
+    },[messages]);
 
     return(
         <div className={classes.Container}>
@@ -24,6 +29,7 @@ const ChatRoom = () => {
                             />
                         );
                     })}
+                    <div ref={lastMessage}></div>
                 </div>
                 <MsgForm messagesCollections={messagesCollections} />
             </div>
