@@ -1,0 +1,21 @@
+.Container {
+    margin-bottom: 5vh;
+  button {
+    border: none;
+    background: none;
+    font-size: 1.3rem;
+    padding: 15px;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 1.3rem;
+      position: relative;
+      right: 10px;
+    }
+  }
+}

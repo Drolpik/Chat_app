@@ -1,0 +1,40 @@
+.Container {
+  form {
+    width: 75vw;
+    margin: 0 2vw 2.5vh 2vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    input {
+      background: #343a72;
+      border: none;
+      outline: none;
+      height: 100%;
+      width: 65vw;
+      border-radius: 20px;
+      font-size: 1.5rem;
+      padding: 20px;
+      color: #7379b0;
+    }
+
+    button {
+      margin-left: 2vw;
+      width: 8vw;
+      background: #4b78ff;
+      border-radius: 20px;
+      border: none;
+      outline: none;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      img {
+        width: 2.5rem;
+      }
+    }
+  }
+}

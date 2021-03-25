@@ -3,8 +3,9 @@ import { useCollectionData } from 'react-firebase-hooks/firestore';
 import classes from './ChatRoom.module.scss';
 import MsgCard from '../MsgCard/MsgCard';
 import MsgForm from '../MsgForm/MsgForm';
+import Navbar from '../Navbar/Navbar';
 
-const ChatRoom = ({ currentRoom }) => {
+const ChatRoom = () => {
     const messagesCollections = db.collection('messages');
     const queryToDB = messagesCollections.orderBy('createdAt').limit(30);
 
@@ -12,17 +13,20 @@ const ChatRoom = ({ currentRoom }) => {
 
     return(
         <div className={classes.Container}>
-            <div>
-                {messages && messages.map(msg => {
-                    return(
-                        <MsgCard 
-                            key={msg.id} 
-                            message={msg}
-                        />
-                    );
-                })}
+            <Navbar  />
+            <div className={classes.Content}>
+                <div className={classes.MsgContainer}>
+                    {messages && messages.map(msg => {
+                        return(
+                            <MsgCard 
+                                key={msg.id} 
+                                message={msg}
+                            />
+                        );
+                    })}
+                </div>
+                <MsgForm messagesCollections={messagesCollections} />
             </div>
-            <MsgForm messagesCollections={messagesCollections} />
         </div>
     );
 };

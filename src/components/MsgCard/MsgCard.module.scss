@@ -1,0 +1,39 @@
+.Container {
+  display: flex;
+  flex-flow: row;
+
+  p {
+    max-width: 500px;
+    margin-bottom: 12px;
+    line-height: 24px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: #e4dcdc;
+    text-align: left;
+    word-break: break-all;
+  }
+
+  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 2px 5px;
+  }
+}
+
+.Sent {
+  flex-flow: row-reverse;
+  justify-content: flex-start;
+
+  p {
+    //background-color: #5b42ac;
+    background-color: #5538b4;
+  }
+}
+
+.Received {
+  p {
+    color: #4b4646;
+    background-color: #e5e5ea;
+  }
+}

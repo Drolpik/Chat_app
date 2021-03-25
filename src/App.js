@@ -9,9 +9,7 @@ function App() {
 
   return (
     <div className="App">
-      <div>
-        {user ? <ChatRoom /> : <SignIn />}
-      </div>
+      {user ? <ChatRoom /> : <SignIn />}
     </div>
   );
 }

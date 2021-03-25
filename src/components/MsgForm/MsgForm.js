@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { auth } from '../../firebase/config';
 import firebase from '../../firebase/config';
 import classes from './MsgForm.module.scss';
+import sendImg from '../../assets/sent-mail.svg';
 
 const MsgForm = (props) => {
     const [formValue, setFormValue] = useState('');
@@ -20,14 +21,19 @@ const MsgForm = (props) => {
     }
 
     return (
-        <form onSubmit={sendMsg}>
-            <input 
-                className={classes.Input}
-                value={formValue}
-                onChange={(event) => setFormValue(event.target.value)}
-            />
-            <button type="submit">Send</button>
-        </form>
+        <div className={classes.Container}>
+            <form onSubmit={sendMsg}>
+                <input 
+                    className={classes.Input}
+                    placeholder="Type here..."
+                    value={formValue}
+                    onChange={(event) => setFormValue(event.target.value)}
+                />
+                <button type="submit">
+                    <img src={sendImg} alt="send" />
+                </button>
+            </form>
+        </div>
     );
 }
 

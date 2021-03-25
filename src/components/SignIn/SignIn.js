@@ -9,7 +9,7 @@ const SignIn = () => {
     return (
         <div className={classes.Container}>
             <div>
-                <h1>CHAT ROOM</h1>
+                <h1>CHAT</h1>
             </div>
             <div className={classes.LoginBtns}>
                 <h1>Hello, log in to use chat</h1>
