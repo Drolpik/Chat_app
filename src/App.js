@@ -1,5 +1,5 @@
-import { auth } from './firebase/config';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { auth } from './firebase/config';
 import './App.scss';
 import ChatRoom from './components/ChatRoom/ChatRoom';
 import SignIn from './components/SignIn/SignIn';

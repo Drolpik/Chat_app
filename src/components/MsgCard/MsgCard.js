@@ -2,16 +2,16 @@ import { auth } from '../../firebase/config';
 import classes from './MsgCard.module.scss';
 
 const MsgCard = (props) => {
-    const { text, uid, photoURL } = props.message;
-    
-    const messageClass = uid === auth.currentUser.uid ? classes.Sent : classes.Received;
+  const { message: { text, uid, photoURL } } = props;
 
-    return (
-        <div className={[classes.Container, messageClass].join(' ')}>
-            <img src={photoURL} alt="user_photo"/>
-            <p>{text}</p>
-        </div>
-    );
-}
+  const messageClass = uid === auth.currentUser.uid ? classes.Sent : classes.Received;
+
+  return (
+    <div className={[classes.Container, messageClass].join(' ')}>
+      <img src={photoURL} alt="user_photo" />
+      <p>{text}</p>
+    </div>
+  );
+};
 
 export default MsgCard;
