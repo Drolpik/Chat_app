@@ -1,16 +1,17 @@
+@import '../../style/variables.scss';
+
 .Container {
   margin-bottom: 5vh;
+
   button {
     border: none;
     background: none;
     font-size: 1.3rem;
     padding: 15px;
     font-weight: 700;
-    color: white;
+    color: inherit;
     cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-ver-hor;
 
     img {
       width: 1.3rem;

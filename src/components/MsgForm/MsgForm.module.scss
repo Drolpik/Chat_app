@@ -1,14 +1,14 @@
+@import '../../style/variables.scss';
+
 .Container {
   form {
     width: 75vw;
     margin: 0 2vw 2.5vh 2vw;
     height: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-ver-hor;
 
     input {
-      background: #343a72;
+      background: $text-input-bg-color;
       border: none;
       outline: none;
       height: 100%;
@@ -16,20 +16,18 @@
       border-radius: 20px;
       font-size: 1.5rem;
       padding: 20px;
-      color: #7379b0;
+      color: $text-input-font-color;
     }
 
     button {
       margin-left: 2vw;
       width: 8vw;
-      background: #4b78ff;
+      background: $send-btn-bg-color;
       border-radius: 20px;
       border: none;
       outline: none;
       height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include flex-ver-hor;
       cursor: pointer;
 
       img {

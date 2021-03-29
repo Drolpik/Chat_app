@@ -1,3 +1,5 @@
+@import '../../style/variables.scss';
+
 .Container {
   display: flex;
   flex-flow: row;
@@ -8,7 +10,7 @@
     line-height: 24px;
     padding: 10px 20px;
     border-radius: 25px;
-    color: #e4dcdc;
+    color: $sent-font-color;
     text-align: left;
     word-break: break-all;
   }
@@ -23,17 +25,15 @@
 
 .Sent {
   flex-flow: row-reverse;
-  justify-content: flex-start;
 
   p {
-    //background-color: #5b42ac;
-    background-color: #5538b4;
+    background-color: $sent-bg-color;
   }
 }
 
 .Received {
   p {
-    color: #4b4646;
-    background-color: #e5e5ea;
+    color: $receive-font-color;
+    background-color: $receive-bg-color;
   }
 }

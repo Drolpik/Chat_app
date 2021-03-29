@@ -1,8 +1,10 @@
+@import '../../style/variables.scss';
+
 .Container {
   overflow: hidden;
   display: flex;
   flex-flow: row;
-  background: #202343;
+  background: $dark-primary-bg-color;
 
   .Content {
     .MsgContainer {
@@ -13,7 +15,7 @@
       padding: 10px;
       display: flex;
       flex-flow: column;
-      background-color: #2c315b;
+      background-color: $primary-bg-color;
       border-radius: 20px;
 
       &::-webkit-scrollbar {
@@ -26,7 +28,7 @@
       }
 
       &::-webkit-scrollbar-thumb {
-        background: #4b78ff;
+        background: $scroll-bar-color;
         border-radius: 20px;
       }
     }

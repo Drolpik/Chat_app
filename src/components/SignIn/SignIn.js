@@ -8,7 +8,7 @@ const SignIn = () => {
 
   return (
     <div className={classes.Container}>
-      <div>
+      <div className={classes.LeftSide}>
         <h1>CHAT</h1>
       </div>
       <div className={classes.LoginBtns}>

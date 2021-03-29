@@ -5,13 +5,15 @@ import classes from './MsgForm.module.scss';
 import sendImg from '../../assets/sent-mail.svg';
 
 const MsgForm = (props) => {
+  const { messagesCollections } = props;
+
   const [formValue, setFormValue] = useState('');
 
   const sendMsg = async (event) => {
     event.preventDefault();
     const { uid, photoURL } = auth.currentUser;
 
-    await props.messagesCollections.add({
+    await messagesCollections.add({
       text: formValue,
       createdAt: firebase.firestore.FieldValue.serverTimestamp(),
       uid,
