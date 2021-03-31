@@ -1,4 +1,85 @@
 @import '../../style/variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap');
 
 .Container {
+  width: 100vw;
+  height: 100vh;
+  @include flex-ver-hor;
+  flex-flow: row;
+
+  div {
+    @include flex-ver-hor;
+    flex-flow: column;
+  }
+
+  .LeftSide {
+    width: 60%;
+    height: 100%;
+    background-image: linear-gradient(
+      to right top,
+      #2c315b,
+      #623e6f,
+      #964b76,
+      #c45e73,
+      #e57b68
+    );
+    color: white;
+    border-top-right-radius: 70px;
+    border-bottom-right-radius: 70px;
+
+    img {
+      width: 50%;
+    }
+
+    .TypeText {
+      position: absolute;
+      top: 80%;
+      h1 {
+        letter-spacing: 3px;
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  .SignInContent {
+    width: 40%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-flow: column;
+
+    h1 {
+      font-size: 2.5rem;
+      font-family: 'Roboto Slab', serif;
+    }
+
+    .LoginBtn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 14rem;
+      height: 3rem;
+      border-radius: 2.5rem;
+      cursor: pointer;
+      background-color: #ffffff;
+      margin: 1rem;
+      font-size: 1rem;
+      outline: none;
+      transition: transform 0.5s ease-out;
+
+      &:hover {
+        transform: translateY(-10%);
+        transition: transform 0.5s ease-out;
+      }
+
+      img {
+        height: 25px;
+        margin-right: 0.5rem;
+      }
+    }
+
+    .GoogleBtn {
+      border: 3px solid #dd3f30;
+    }
+  }
 }

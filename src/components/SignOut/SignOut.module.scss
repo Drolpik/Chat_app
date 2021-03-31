@@ -12,6 +12,7 @@
     color: inherit;
     cursor: pointer;
     @include flex-ver-hor;
+    outline: none;
 
     img {
       width: 1.3rem;
