@@ -1,6 +1,6 @@
-import { auth } from '../../firebase/config';
+import { auth } from '../../../firebase/config';
 import classes from './SignOut.module.scss';
-import signoutImg from '../../assets/sign-out.svg';
+import signoutImg from '../../../assets/sign-out.svg';
 
 const SignOut = () => {
   const logout = () => (auth.currentUser && auth.signOut());

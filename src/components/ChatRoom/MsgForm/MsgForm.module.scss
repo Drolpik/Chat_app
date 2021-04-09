@@ -1,10 +1,11 @@
-@import '../../style/variables.scss';
+@import '../../../style/variables.scss';
 
 .Container {
+  width: 100%;
   form {
-    width: 75vw;
+    width: auto;
     margin: 0 2vw 2.5vh 2vw;
-    height: 10vh;
+    height: 8vh;
     @include flex-ver-hor;
 
     input {
@@ -12,7 +13,7 @@
       border: none;
       outline: none;
       height: 100%;
-      width: 65vw;
+      width: 90%;
       border-radius: 20px;
       font-size: 1.5rem;
       padding: 20px;
@@ -21,7 +22,7 @@
 
     button {
       margin-left: 2vw;
-      width: 8vw;
+      width: 10%;
       background: $send-btn-bg-color;
       border-radius: 20px;
       border: none;

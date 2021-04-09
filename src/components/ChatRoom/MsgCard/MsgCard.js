@@ -1,4 +1,4 @@
-import { auth } from '../../firebase/config';
+import { auth } from '../../../firebase/config';
 import classes from './MsgCard.module.scss';
 
 const MsgCard = (props) => {

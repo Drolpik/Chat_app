@@ -1,5 +1,5 @@
 # Chat App
-The application is used to chat with other people by sending messages in real time. The added Firebase allows user to sign in using Google, Facebook or Github. 
+The application is used to chat with other people by sending messages in real time. The added Firebase allows user to sign in using Google, Facebook or Github.
 
 ## Installation and Setup Instructions
 * Clone this repository
@@ -10,6 +10,6 @@ The application is used to chat with other people by sending messages in real ti
 ## Technologies
 * React
 * Firebase
-* SASS
+* SCSS
 
 <strong>lang:</strong> ENG

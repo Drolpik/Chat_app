@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import firebase, { auth } from '../../firebase/config';
+import firebase, { auth } from '../../../firebase/config';
 
 import classes from './MsgForm.module.scss';
-import sendImg from '../../assets/sent-mail.svg';
+import sendImg from '../../../assets/sent-mail.svg';
 
 const MsgForm = (props) => {
   const { messagesCollections } = props;
