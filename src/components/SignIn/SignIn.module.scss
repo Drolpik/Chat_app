@@ -23,7 +23,7 @@
       $linearGradient-4-color,
       $linearGradient-5-color
     );
-    color: $white-font-color;
+    color: $dark-font-color;
     border-top-right-radius: 70px;
     border-bottom-right-radius: 70px;
 
@@ -44,7 +44,7 @@
   .SignInContent {
     width: 40%;
     height: 100%;
-    background-color: $white-font-color;
+    background-color: #ffffff;
     display: flex;
     flex-flow: column;
 
@@ -60,7 +60,7 @@
       height: 3rem;
       border-radius: 2.5rem;
       cursor: pointer;
-      background-color: $white-font-color;
+      background-color: #ffffff;
       margin: 1rem;
       font-size: 1rem;
       outline: none;

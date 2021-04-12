@@ -5,7 +5,7 @@ import classes from './MsgForm.module.scss';
 import sendImg from '../../../assets/sent-mail.svg';
 
 const MsgForm = (props) => {
-  const { messagesCollections } = props;
+  const { messagesCollections, darkMode } = props;
 
   const [formValue, setFormValue] = useState('');
 
@@ -22,16 +22,19 @@ const MsgForm = (props) => {
     setFormValue('');
   };
 
+  const darkModeInputClass = darkMode ? classes.DarkInput : classes.LightInput;
+  const darkModeBtnClass = darkMode ? classes.DarkBtn : classes.LightBtn;
+
   return (
     <div className={classes.Container}>
       <form onSubmit={sendMsg}>
         <input
-          className={classes.Input}
+          className={[classes.Input, darkModeInputClass].join(' ')}
           placeholder="Type here..."
           value={formValue}
           onChange={(event) => setFormValue(event.target.value)}
         />
-        <button type="submit">
+        <button className={[classes.Button, darkModeBtnClass].join(' ')} type="submit">
           <img src={sendImg} alt="send" />
         </button>
       </form>

@@ -7,8 +7,6 @@
   flex-flow: column;
   justify-content: space-between;
   align-items: center;
-  background-color: $navbar-bg-color;
-  color: $white-font-color;
   border-top-right-radius: 40px;
   border-bottom-right-radius: 40px;
   z-index: 2;
@@ -30,8 +28,6 @@
 
   @media screen and (max-width: 940px) {
     transform: translateX(-100%);
-    transition: transform 0.5s ease-in-out;
-    background-color: $navbarToggle-bg-color;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
@@ -39,4 +35,26 @@
 
 .ToggleBurger {
   transform: translateX(0%);
+}
+
+.Light {
+  background-color: $light-navbar-bg-color;
+  color: $light-font-color;
+  transition: transform 0.5s ease-in-out, background-color 1.5s ease,
+    color 1.5s ease;
+
+  @media screen and (max-width: 940px) {
+    background-color: $light-navbarToggle-bg-color;
+  }
+}
+
+.Dark {
+  background-color: $dark-navbar-bg-color;
+  color: $dark-font-color;
+  transition: transform 0.5s ease-in-out, background-color 1.5s ease,
+    color 1.5s ease;
+
+  @media screen and (max-width: 940px) {
+    background-color: $dark-navbarToggle-bg-color;
+  }
 }

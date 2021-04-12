@@ -9,7 +9,6 @@
     @include flex-ver-hor;
 
     input {
-      background: $text-input-bg-color;
       border: none;
       outline: none;
       height: 100%;
@@ -17,13 +16,11 @@
       border-radius: 20px;
       font-size: 1.5rem;
       padding: 20px;
-      color: $text-input-font-color;
     }
 
-    button {
+    .Button {
       margin-left: 2vw;
       width: 10%;
-      background: $send-btn-bg-color;
       border-radius: 20px;
       border: none;
       outline: none;
@@ -32,8 +29,40 @@
       cursor: pointer;
 
       img {
-        width: 2.5rem;
+        width: 35%;
+        min-width: 20px;
+      }
+    }
+
+    @media screen and (max-width: 550px) {
+      input {
+        width: 80%;
+      }
+      button {
+        width: 20%;
       }
     }
   }
+}
+
+.DarkInput {
+  background: $dark-text-input-bg-color;
+  color: $dark-text-input-font-color;
+  transition: background-color 1.5s ease, color 1.5s ease;
+}
+
+.LightInput {
+  background-color: $light-text-input-bg-color;
+  color: $light-text-input-font-color;
+  transition: background-color 1.5s ease, color 1.5s ease;
+}
+
+.DarkBtn {
+  background: $dark-send-btn-bg-color;
+  transition: background-color 1.5s ease;
+}
+
+.LightBtn {
+  background-color: $light-send-btn-bg-color;
+  transition: background-color 1.5s ease;
 }

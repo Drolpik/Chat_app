@@ -4,8 +4,8 @@
   overflow: hidden;
   display: flex;
   flex-flow: row;
-  background: $dark-primary-bg-color;
   height: 100vh;
+  min-width: 280px;
 
   .Burger {
     display: none;
@@ -19,7 +19,6 @@
       width: 25px;
       height: 3px;
       margin: 5px;
-      background-color: white;
       transition: all 0.3s ease;
     }
   }
@@ -37,7 +36,6 @@
       padding: 10px;
       display: flex;
       flex-flow: column;
-      background-color: $primary-bg-color;
       border-radius: 20px;
 
       &::-webkit-scrollbar {
@@ -79,4 +77,38 @@
   .Line3 {
     transform: rotate(45deg) translate(-5px, -6px);
   }
+}
+
+.DarkBurger {
+  div {
+    background-color: $dark-font-color;
+    transition: background-color 1.5s ease;
+  }
+}
+
+.LightBurger {
+  div {
+    background-color: $light-font-color;
+    transition: background-color 1.5s ease;
+  }
+}
+
+.DarkContainer {
+  background: $dark-primary-bg-color;
+  transition: background-color 1.5s ease;
+}
+
+.LightContainer {
+  background-color: $light-primary-bg-color;
+  transition: background-color 1.5s ease;
+}
+
+.DarkMsgContainer {
+  background-color: $dark-secondary-bg-color;
+  transition: background-color 1.5s ease;
+}
+
+.LightMsgContainer {
+  background-color: $light-secondary-bg-color;
+  transition: background-color 1.5s ease;
 }
