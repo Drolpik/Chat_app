@@ -6,6 +6,8 @@
   flex-flow: row;
   height: 100vh;
   min-width: 280px;
+  min-height: 560px;
+  transition: background-color 1.5s ease;
 
   .Burger {
     display: none;
@@ -37,19 +39,10 @@
       display: flex;
       flex-flow: column;
       border-radius: 20px;
+      transition: background-color 1.5s ease;
 
       &::-webkit-scrollbar {
         width: 0.5rem;
-      }
-
-      &::-webkit-scrollbar-track {
-        background: none;
-        border-radius: 20px;
-      }
-
-      &::-webkit-scrollbar-thumb {
-        background: $scroll-bar-color;
-        border-radius: 20px;
       }
     }
   }
@@ -82,33 +75,31 @@
 .DarkBurger {
   div {
     background-color: $dark-font-color;
-    transition: background-color 1.5s ease;
   }
 }
 
 .LightBurger {
   div {
     background-color: $light-font-color;
-    transition: background-color 1.5s ease;
   }
 }
 
 .DarkContainer {
   background: $dark-primary-bg-color;
-  transition: background-color 1.5s ease;
 }
 
 .LightContainer {
   background-color: $light-primary-bg-color;
-  transition: background-color 1.5s ease;
 }
 
 .DarkMsgContainer {
   background-color: $dark-secondary-bg-color;
-  transition: background-color 1.5s ease;
+  @include scrollbar-track;
+  @include scrollbar-thumb($dark-scroll-bar-color);
 }
 
 .LightMsgContainer {
   background-color: $light-secondary-bg-color;
-  transition: background-color 1.5s ease;
+  @include scrollbar-track;
+  @include scrollbar-thumb($light-scroll-bar-color);
 }

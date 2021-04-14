@@ -1,17 +1,24 @@
 // ChatRoom
-$scroll-bar-color: #4b78ff;
 // dark
 $dark-primary-bg-color: #202343;
 $dark-secondary-bg-color: #2c315b;
+$dark-scroll-bar-color: #4b78ff;
 // light
 $light-primary-bg-color: lightblue;
 $light-secondary-bg-color: #c7f7f7;
+$light-scroll-bar-color: #54c4c4;
 
 // MsgCard
-$sent-font-color: #e4dcdc;
-$sent-bg-color: #5538b4;
-$receive-font-color: #4b4646;
-$receive-bg-color: #e5e5ea;
+// dark
+$dark-sent-font-color: #ffffff;
+$dark-sent-bg-color: #5538b4;
+$dark-receive-font-color: #4b4646;
+$dark-receive-bg-color: #e5e5ea;
+// light
+$light-sent-font-color: #ffffff;
+$light-sent-bg-color: #54c4c4;
+$light-receive-font-color: #000000;
+$light-receive-bg-color: #ffffff;
 
 // MsgForm
 // dark
@@ -52,3 +59,19 @@ $light-font-color: #496363;
   justify-content: center;
   align-items: center;
 }
+
+// ChatRoom functions
+@mixin scrollbar-track {
+  &::-webkit-scrollbar-track {
+    background-color: none;
+    border-radius: 20px;
+  }
+}
+
+@mixin scrollbar-thumb($color) {
+  &::-webkit-scrollbar-thumb {
+    background-color: $color;
+    border-radius: 20px;
+  }
+}
+//===================

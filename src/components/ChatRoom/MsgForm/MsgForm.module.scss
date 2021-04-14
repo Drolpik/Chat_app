@@ -16,6 +16,7 @@
       border-radius: 20px;
       font-size: 1.5rem;
       padding: 20px;
+      transition: background-color 1.5s ease, color 1.5s ease;
     }
 
     .Button {
@@ -27,6 +28,7 @@
       height: 100%;
       @include flex-ver-hor;
       cursor: pointer;
+      transition: background-color 1.5s ease;
 
       img {
         width: 35%;
@@ -38,7 +40,7 @@
       input {
         width: 80%;
       }
-      button {
+      .Button {
         width: 20%;
       }
     }
@@ -48,21 +50,17 @@
 .DarkInput {
   background: $dark-text-input-bg-color;
   color: $dark-text-input-font-color;
-  transition: background-color 1.5s ease, color 1.5s ease;
 }
 
 .LightInput {
   background-color: $light-text-input-bg-color;
   color: $light-text-input-font-color;
-  transition: background-color 1.5s ease, color 1.5s ease;
 }
 
 .DarkBtn {
   background: $dark-send-btn-bg-color;
-  transition: background-color 1.5s ease;
 }
 
 .LightBtn {
   background-color: $light-send-btn-bg-color;
-  transition: background-color 1.5s ease;
 }

@@ -46,7 +46,7 @@ const ChatRoom = () => {
       <div className={classes.Content}>
         <div className={[classes.MsgContainer, darkModeMsgContainerClass].join(' ')}>
           {messages
-            && messages.map((msg) => <MsgCard key={msg.id} message={msg} />)}
+            && messages.map((msg) => <MsgCard key={msg.id} message={msg} darkMode={darkMode} />)}
           <div ref={lastMessage} />
         </div>
         <MsgForm messagesCollections={messagesCollections} darkMode={darkMode} />

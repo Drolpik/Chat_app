@@ -10,9 +10,10 @@
     line-height: 24px;
     padding: 10px 20px;
     border-radius: 25px;
-    color: $sent-font-color;
+    color: $dark-sent-font-color;
     text-align: left;
     word-break: break-all;
+    transition: background-color 1.5s ease, color 1.5s ease;
   }
 
   img {
@@ -23,17 +24,32 @@
   }
 }
 
-.Sent {
+.DarkSent {
   flex-flow: row-reverse;
 
   p {
-    background-color: $sent-bg-color;
+    background-color: $dark-sent-bg-color;
   }
 }
 
-.Received {
+.DarkReceived {
   p {
-    color: $receive-font-color;
-    background-color: $receive-bg-color;
+    color: $dark-receive-font-color;
+    background-color: $dark-receive-bg-color;
+  }
+}
+
+.LightSent {
+  flex-flow: row-reverse;
+
+  p {
+    background-color: $light-sent-bg-color;
+  }
+}
+
+.LightReceived {
+  p {
+    color: $light-receive-font-color;
+    background-color: $light-receive-bg-color;
   }
 }
