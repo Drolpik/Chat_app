@@ -6,6 +6,8 @@
   height: 100vh;
   @include flex-ver-hor;
   flex-flow: row;
+  min-width: 250px;
+  min-height: 500px;
 
   div {
     @include flex-ver-hor;
@@ -23,12 +25,14 @@
       $linearGradient-4-color,
       $linearGradient-5-color
     );
-    color: $dark-font-color;
+    color: #ffffff;
     border-top-right-radius: 70px;
     border-bottom-right-radius: 70px;
 
     img {
       width: 50%;
+      max-width: 720px;
+      min-width: 300px;
     }
 
     .TypeText {
@@ -36,7 +40,11 @@
       top: 80%;
       h1 {
         letter-spacing: 3px;
-        font-size: 2.5rem;
+        font-size: clamp(2rem, 3vw, 3rem);
+      }
+
+      @media screen and (max-height: 500px) {
+        display: none;
       }
     }
   }
@@ -49,7 +57,7 @@
     flex-flow: column;
 
     h1 {
-      font-size: 2.5rem;
+      font-size: clamp(2.5rem, 2vw, 3rem);
       font-family: 'Roboto Slab', serif;
     }
 
@@ -87,6 +95,34 @@
 
     .GithubBtn {
       border: 3px solid $githubBtn-border-color;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    min-height: 500px;
+    flex-flow: column;
+
+    .LeftSide {
+      width: 100%;
+      height: 40%;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 40px;
+      border-bottom-left-radius: 40px;
+
+      img {
+        width: 45%;
+        min-width: 200px;
+        margin: 1rem 1rem;
+      }
+
+      .TypeText {
+        display: none;
+      }
+    }
+
+    .SignInContent {
+      width: 100%;
+      height: 60%;
     }
   }
 }
